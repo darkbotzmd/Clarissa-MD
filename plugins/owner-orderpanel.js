@@ -1,0 +1,14 @@
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (!text) throw `netnot>`
+    if (text.length < 1 ) throw `Laporan terlalu pendek, minimal 10 karakter!`
+    if (text.length > 1000) throw `Laporan terlalu panjang, maksimal 1000 karakter!`
+    let teks = `*${htki} ${command.toUpperCase()} ${htka}*\n Woy Rei Nih Ada Yg Mau Order!\n📮 : ${text}\n*- @${m.sender.split`@`[0]}*`
+    conn.reply(global.adminpanel + '@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, null, {
+        contextInfo: {
+            mentionedJid: [m.sender]
+        }
+    })
+    m.reply('📮 Pesan Telah terkirim ke Admin Panel!\n_*Silahkan Tunggu Konfirmasi Dari Admin Kami (Rei)...*_')
+}
+handler.command = /^(buyer)$/i
+export default handler

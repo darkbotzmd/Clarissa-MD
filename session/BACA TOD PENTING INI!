@@ -1,0 +1,11 @@
+Script Ini Dilengkapi Dengan Multiauth Dan SinggleAuth
+Jadi Bedanya Single Ama Multi Itu Adalah
+
+Singgle: Hanya Bisa Pakai 1 Session
+Multi: Bisa Pakai Lebih Dari 1 Session
+
+Note: Kalo Mau Ubah Jadi MultiAuth main2.js Diganti Dengan Nama main.js 
+
+-Nama Session-
+Singgle: rullzy.data.json
+Multi: session.json (Taruh Didalam Folder Ini!)
